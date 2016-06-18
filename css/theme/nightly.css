@@ -9,7 +9,7 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: url(img/nightly-content-bg.png?d=2013-11-06) 50% -40px no-repeat;
+  background: url(img/nightly-content-bg.png) 50% -40px no-repeat;
   background-color: #222; }
 
 .reveal {
