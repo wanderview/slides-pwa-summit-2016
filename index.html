@@ -28,10 +28,11 @@
         <h2>Progressive Web Apps in Firefox</h2>
         <p>Ben Kelly<p>
         <p><small>
-        @wanderview on <a href="https://twitter.com/wanderview">Twitter</a> and
-        <a href="https://github.com/wanderview">Github</a>
+        @wanderview on
+        <a href="https://twitter.com/wanderview" target="_blank" rel="noopener">Twitter</a>
+        and
+        <a href="https://github.com/wanderview" target="_blank" rel="noopener">Github</a>
         </small></p>
-        <p><b>DRAFT PLEASE DON'T SHARE</b></p>
         </section>
         <section>
         <img src="img/dom.png" style="border:0">
@@ -46,10 +47,26 @@
         <p class="fragment">Shipped to users in Firefox 44 in January 2016</p>
         </section>
         <section>
-        <p>Taking the time was worthwhile.  It allowed us...
-        <p class="fragment">... to fix many security issues.</p>
-        <p class="fragment">... to help clarify ambiguity in the spec.</p>
-        <p class="fragment">... to expand and upstream the web-platform tests started by Blink.</p>
+        <p>Worth the wait for:</p>
+        <ul>
+        <li class="fragment">security</li>
+        <li class="fragment">an improved specification</li>
+        <li class="fragment">
+          <a href="https://github.com/w3c/web-platform-tests/tree/master/service-workers/service-worker" target="_blank" rel="noopener">
+          web-platform-tests
+          </a>
+        </li>
+        <li class="fragment">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker" target="_blank" rel="noopener">
+          mozilla developer network (MDN)
+          </a>
+        </li>
+        <li class="fragment">
+          <a href="https://serviceworke.rs/" target="_blank" rel="noopener">
+          service worker cookbook
+          </a>
+        </li>
+        </ul>
         </section>
         <section>
         <img src="img/sw-page-loads-chart.png" style="border:0">
@@ -62,10 +79,12 @@
         </small>
         </section>
         <section>
-        <p>We also shipped push support in Firefox 44 ...</p>
-        <p class="fragment">... but only for desktop</p>
-        <p class="fragment">We plan to ship push in Firefox for Android 48 or
-                            49</p>
+        <p>Push</p>
+        <ul>
+        <li class="fragment">Also shipped in Firefox 44 ...</li>
+        <li class="fragment">... but only for desktop</li>
+        <li class="fragment">Firefox for Android planned for 48 or 49</li>
+        </ul>
         </section>
         <section>
         <img src="img/push-demo-3x.gif" style="border:0">
@@ -81,30 +100,38 @@
         </small>
         </section>
         <section>
-        <p>We also did a lot of server side work for push, like ...</p>
-        <p class="fragment">... helping define the IETF webpush standard</p>
-        <p class="fragment">... building a reference server implementation of
-                                the webpush standard</p>
-        <p class="fragment">... writing a lot of excellent documentation on
-                                setting up and integrating with the webpush
-                                server</p>
-        <p class="fragment">... beginning work on a subscription dashboard
-                                interface for the webpush server</p>
+        <p>More push:</p>
+        <ul>
+        <li class="fragment">
+          <a href="https://datatracker.ietf.org/wg/webpush/documents/" target="_blank" rel="noopener">
+          IETF standards
+          </a>
+        </li>
+        <li class="fragment">
+          <a href="https://mozilla-push-service.readthedocs.io/en/latest/" target="_blank" rel="noopener">
+          reference server implementation
+          </a>
+        </li>
+        <li class="fragment">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/Push_API" target="_blank" rel="noopener">
+          mozilla developer network (MDN)
+          </a>
+        </li>
+        <li class="fragment">
+          <a href="https://serviceworke.rs/web-push.html" target="_blank" rel="noopener">
+          service worker cookbook
+          </a>
+        </li>
+        </ul>
         </section>
         <section>
-        <p>Speaking of documentation ...</p>
-        <p class="fragment">... MDN has API documentation for service workers
-                                and push</p>
-        <p class="fragment">... MDN also has guides on integrating with the
-                                webpush server</p>
-        <p class="fragment">... serviceworke.rs has great demos and example
-                                code</p>
-        </section>
-        <section>
-        <p>Service worker support in Firefox devtools has also improved ...</p>
-        <p class="fragment">... we started with about:serviceworkers</p>
-        <p class="fragment">... and are now moving to about:debugging</p>
-        <p class="fragment">... which includes worker debugging!</p>
+        <p>Devtools</p>
+        <ul>
+          <li class="fragment">about:serviceworkers</li>
+          <li class="fragment">worker debugging ...</li>
+          <li class="fragment">... for fetch and push events</li>
+          <li class="fragment">no install debugging yet</li>
+        </ul>
         </section>
         <section>
         <img src="img/devtools-sw-menu.png" style="border:0">
@@ -113,11 +140,24 @@
         <img src="img/devtools-sw-debugger.png" style="border:0">
         </section>
         <section>
-        <p>We are also working on manifest install ...</p>
-        <p class="fragment">... platform support is largely implemented</p>
-        <p class="fragment">... but product integration is still needed</p>
-        <p class="fragment">... some initial UI experiments have been run</p>
-        <p class="fragment">... but there is no target release version yet</p>
+        <p>network panel</p>
+        </section>
+        <section>
+        <img src="img/sw-network-panel.png" style="border:0">
+        </section>
+        <section>
+        <p>cache storage inspector</p>
+        </section>
+        <section>
+        <img src="img/storage.png" style="border:0">
+        </section>
+        <section>
+        <p>Manifest</p>
+        <ul>
+          <li class="fragment">platform support largely implemented</li>
+          <li class="fragment">product integration still needed</li>
+          <li class="fragment">some initial UI experiments have been run</li>
+        </ul>
         </section>
         <section>
         <p>Experimental</p>
@@ -125,27 +165,31 @@
         <p>Does not use manifest yet</p>
         </section>
         <section>
-        <p>BackgroundSync is also in development ...
-        <p class="fragment">... patches are close and should land later this
-                                summer</p>
-        <p class="fragment">... might release in Firefox 52 or 53</p>
+        <p>No release date for add-to-homescreen yet</p>
+        </section>
+        <section>
+        <p>BackgroundSync</p>
+        <ul>
+          <li class="fragment">well into development with functional patches</li>
+          <li class="fragment">might release in Firefox 51 or 52</li>
+        </ul>
         </section>
         <section>
         <img src="img/bg-sync-2x.gif" style="border:0">
         </section>
         <section>
-        <p>And we continue to work on many other related APIs, like...</p>
-        <p class="fragment">... the full Cache API including features like
-                                ignoreSearch</p>
-        <p class="fragment">... Request.referrer and referrer policy support in
-                                Firefox 47</p>
-        <p class="fragment">... Request.cache support in Firefox 48</p>
-        <p class="fragment">... Request.integrity SRI support expected in
-                                Firefox 50 or 51</p>
-        <p class="fragment">... Streams API which is in development and planned
-                                to ship in stages across Firefox 50 to 52</p>
-        <p class="fragment">... the Storage API which has just begun
-                                development</p>
+        <p>And many more ...</p>
+        <ul>
+        <li class="fragment">full Cache API including features like ignoreSearch</li>
+        <li class="fragment">Request.referrer and referrer policy support in
+                             Firefox 47</li>
+        <li class="fragment">Request.cache support in Firefox 48</li>
+        <li class="fragment">Request.integrity SRI support expected in Firefox
+                             50 or 51</li>
+        <li class="fragment">Streams API which is in development and planned to
+                             ship in stages across Firefox 50 to 52</li>
+        <li class="fragment">Storage API which has just begun development</li>
+        </ul>
         </section>
         <section>
         <p>Mozilla cares about the Web</p>

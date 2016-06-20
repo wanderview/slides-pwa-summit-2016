@@ -24,6 +24,7 @@ let precache = [
 ];
 
 addEventListener('install', evt => {
+  debugger;
   evt.waitUntil(
     caches.open(cacheName).then(cache => {
       return cache.addAll(
