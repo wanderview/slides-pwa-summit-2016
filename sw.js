@@ -1,10 +1,24 @@
 'use strict';
 
-let version = 1;
+let version = 2;
 let prefix = 'slides-pwa-summit-2016-';
 let cacheName = prefix + version;
 
 let precache = [
+  // content
+  './',
+  'img/dom.png',
+  'img/sw-page-loads-chart.png',
+  'img/push-demo-3x.gif',
+  'img/push-chart.png',
+  'img/devtools-sw-menu.png',
+  'img/devtools-sw-debugger.png',
+  'img/sw-network-panel.png',
+  'img/storage.png',
+  'img/add-to-homescreen-2x.gif',
+  'img/bg-sync-2x.gif',
+
+  // shell
   'css/reveal.css',
   'css/theme/nightly.css',
   'lib/css/zenburn.css',
@@ -47,9 +61,13 @@ addEventListener('activate', evt => {
 });
 
 addEventListener('fetch', evt => {
+  let req = evt.request;
+  if (req.url.indexOf('index.html') !== -1) {
+    req = new Request('./');
+  }
   evt.respondWith(caches.open(cacheName).then(cache => {
-    return cache.match(evt.request);
+    return cache.match(req);
   }).then(response => {
-    return response || fetch(evt.request);
+    return response || fetch(req);
   }));
 });
