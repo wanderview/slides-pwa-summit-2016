@@ -222,7 +222,9 @@
     </script>
 
     <script>
-    if (navigator.serviceWorker && !navigator.serviceWorker.controller) {
+    if (navigator.serviceWorker &&
+        (!navigator.serviceWorker.controller ||
+         navigator.serviceWorker.controller.scriptURL.indexOf('slides-pwa-summit-2016') === -1)) {
       navigator.serviceWorker.register('sw.js');
     }
     </script>
